@@ -1,0 +1,13 @@
+{
+  "label": "Breadcrumb",
+  "breadcrumbItems": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Life events",
+      "url": "../life-events-home"
+    }
+  ]
+}

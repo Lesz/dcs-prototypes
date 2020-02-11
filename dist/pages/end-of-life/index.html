@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NSW Digital Design System - End of Life</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <script>
+    // SVG Sprite Loader
+    var svgAjax = new XMLHttpRequest();
+    svgAjax.open("GET", "../../assets/svg/sprite.svg", true);
+    svgAjax.send();
+    svgAjax.onload = function(e) {
+      var fragment = document.createRange().createContextualFragment(svgAjax.responseText);
+      var svg = fragment.querySelector('svg')
+      svg.setAttribute('aria-hidden', true);
+      svg.style.cssText = 'position: absolute; width: 0; height: 0; overflow: hidden;'
+      document.body.insertBefore(fragment, document.body.childNodes[0]);
+    };
+    // Replace 'no-js' with 'js' on the html tag
+    (function(e){e.className=e.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+  </script>
+</head>
+
+<body>
+  <nav class="nsw-skipto nsw-container" aria-label="Skip to links">
+  <a class="nsw-skipto__link" href="#nav"><span>Skip to navigation</span></a>
+  <a class="nsw-skipto__link" href="#content"><span>Skip to content</span></a>
+</nav>
+<div class="nsw-infobar">
+  <div class="nsw-container">
+    <p>A NSW Government website</p>
+  </div>
+</div>
+<header class="nsw-header">
+  <div class="nsw-header__container">
+    <div class="nsw-header__wrapper">
+      <div class="nsw-header__center">
+        <a href="#" class="nsw-header__logo-link">
+          <svg class="nsw-icon nsw-header__logo" focusable="false" aria-hidden="true">
+            <use xlink:href="#dpc-logo"></use>
+          </svg>
+          <span class="sr-only">NSW Department of Premier and Cabinet</span>
+        </a>
+      </div>
+      <div class="nsw-header__left">
+        <button type="button" class="nsw-header-btn nsw-header-btn--menu js-open-navigation" aria-expanded="false"
+          aria-controls="main-navigation">
+          <svg class="nsw-icon nsw-header-btn__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#menu"></use>
+            <span class="nsw-header-btn__sub"><span class="sr-only">Open</span> Menu</span>
+          </svg>
+        </button>
+      </div>
+      <div class="nsw-header__right">
+        <button type="button" class="nsw-header-btn nsw-header-btn--search js-open-search" aria-expanded="false"
+          aria-controls="header-search">
+          <svg class="nsw-icon nsw-header-btn__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+          <span class="nsw-header-btn__sub"><span class="sr-only">Show</span> Search</span>
+        </button>
+      </div>
+    </div>
+    <div class="nsw-search">
+      <div id="header-search" class="nsw-search__area js-search-area" hidden>
+        <form role="search">
+          <label for="nsw-search__input" class="sr-only">Search site for:</label>
+          <input autocomplete="off" class="nsw-search__input js-search-input" id="nsw-search__input"
+            name="input-autocomplete" type="text">
+          <svg class="nsw-icon nsw-search__search-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+        </form>
+        <button class="nsw-search__close-btn js-close-search" aria-expanded="true" aria-controls="header-search">
+          <svg class="nsw-icon nsw-search__close-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
+          <span class="sr-only">Close search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="main-navigation" class="nsw-navigation js-mega-menu" aria-label="Main menu">
+  <div class="nsw-navigation__header">
+    <h2 id="nsw-navigation">Menu</h2>
+    <button type="button" class="nsw-navigation__close js-close-navigation" aria-expanded="true">
+      <svg class="nsw-icon icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#close"></use>
+      </svg>
+      <span class="sr-only">Close Menu</span>
+    </button>
+  </div>
+  <ul class="nsw-navigation__list">
+      <li class="nsw-navigation__list-item">
+        <a href="../life-events-home" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">Life Events</span>
+          <svg class="nsw-icon nsw-navigation__link-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#chevron"></use>
+          </svg>
+        </a>
+        <button type="button" class="nsw-navigation__subbtn js-open-subnav" aria-controls="914d7e2-subnav" aria-expanded="false">
+          <svg class="nsw-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#chevron"></use>
+          </svg>
+          <span class="sr-only">Show Life Events Submenu</span>
+        </button>
+          <div class="nsw-subnavigation" id="914d7e2-subnav" role="region" aria-label="Life Events Submenu">
+            <div class="nsw-subnavigation__header">
+              <button type="button" class="nsw-subnavigation__back-btn js-close-subnav" aria-controls="914d7e2-subnav" aria-expanded="true">
+                <svg class="nsw-icon nsw-icon--rotate-180" focusable="false" aria-hidden="true">
+                  <use xlink:href="#chevron"></use>
+                </svg>
+                <span><span class="sr-only">Back to</span> Life Events</span>
+              </button>
+
+              <h2 class="nsw-subnavigation__title">
+                <a href="../life-events-home" class="nsw-subnavigation__title-link">
+                  Life Events
+                  <svg class="nsw-icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#arrow"></use>
+                  </svg>
+                </a>
+              </h2>
+              <p class="nsw-subnavigation__description"></p>
+
+              <button type="button" class="nsw-navigation__close js-close-navigation" aria-expanded="true">
+                <svg class="nsw-icon icon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#close"></use>
+                </svg>
+                <span class="sr-only">Close Menu</span>
+              </button>
+            </div>
+            <ul class="nsw-subnavigation__list">
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../starting-and-growing-a-family" class="nsw-subnavigation__link">
+                    Starting and growing a family
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../schooling" class="nsw-subnavigation__link">
+                    Schooling
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../jobs-and-career" class="nsw-subnavigation__link">
+                    Jobs and Career
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../serious-illness-and-injury" class="nsw-subnavigation__link">
+                    Serious illness and injury
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../natural-disasters" class="nsw-subnavigation__link">
+                    Natural disasters
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../living-in-nsw" class="nsw-subnavigation__link">
+                    Living in NSW
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../retirement" class="nsw-subnavigation__link">
+                    Retirement
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="../end-of-life" class="nsw-subnavigation__link">
+                    End of Life
+                  </a>
+                </li>
+                <li class="nsw-subnavigation__list-item">
+                  <a href="#" class="nsw-subnavigation__link">
+                    Another link
+                  </a>
+                </li>
+            </ul>
+          </div>
+      </li>
+      <li class="nsw-navigation__list-item">
+        <a href="#" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">Improving NSW</span>
+        </a>
+      </li>
+      <li class="nsw-navigation__list-item">
+        <a href="#" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">Your Services</span>
+        </a>
+      </li>
+      <li class="nsw-navigation__list-item">
+        <a href="#" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">Your Government</span>
+        </a>
+      </li>
+      <li class="nsw-navigation__list-item">
+        <a href="#" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">About NSW</span>
+        </a>
+      </li>
+      <li class="nsw-navigation__list-item">
+        <a href="#" class="nsw-navigation__link">
+          <span class="nsw-navigation__link-text">Contact us</span>
+        </a>
+      </li>
+  </ul>
+</nav>
+<main>
+  <article>
+    <header class="standard-header">
+
+<div class="standard-header__background">  </div>
+    <div class="standard-header__content">
+    <div class="nsw-container">
+      <nav aria-label="Breadcrumb" class="nsw-breadcrumb">
+        <ol class="nsw-breadcrumb__list">
+            <li class="nsw-breadcrumb__item">
+              <a href="/" class="nsw-breadcrumb__link">Home</a>
+            </li>
+            <li class="nsw-breadcrumb__item">
+              <a href="../life-events-home" class="nsw-breadcrumb__link">Life events</a>
+            </li>
+          <li class="nsw-breadcrumb__item">
+            <a href="" class="nsw-breadcrumb__link nsw-breadcrumb--current" aria-current="page">End of Life</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="nsw-wysiwyg-content">
+      <h1>After a death</h1>
+      <div class="deck"><p>When someone dies, there can be pressure to make big decisions quickly. This guide provides information to help you make the right decisions for you.</p>
+</div>
+
+
+
+
+</div>
+          </div>
+  </div>
+
+
+
+</header>
+
+
+<div class="nsw-container">
+
+<div class="nsw-grid">
+
+  <div class="nsw-col nsw-col--two-thirds">
+    <div class="nsw-notification nsw-notification--info">
+	  <svg class="nsw-icon nsw-notification__icon" focusable="false" aria-hidden="true">
+	    <use xlink:href="#status-info"></use>
+	  </svg>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This content is still being developed.</h4>
+	    <p>Below is an example how sequential (numbered) accordion may look like.</p>
+	  </div>
+	</div>
+<div class="nsw-accordion js-accordion numbered-accordion">
+	  <h2 class="nsw-accordion__title">First steps</h2>
+	  <div class="nsw-accordion__content">
+ <p>In the first days after someone dies you might need to:</p>
+<ul><li>talk to the healthcare team about next steps</li>
+<li>let people know (eg. family, friends)</li>
+<li>talk to a <a href="https://www.fairtrading.nsw.gov.au/buying-products-and-services/buying-services/funerals/using-a-funeral-director" title="www.fairtrading.nsw.gov.au" class="ext" target="_blank" rel="noopener noreferrer nofollow">funeral director<span class="ext" aria-label="(link is external)"></span></a></li>
+<li>find the will</li>
+<li>consider <a href="https://www.fairwork.gov.au/leave/compassionate-and-bereavement-leave" title="www.fairwork.gov.au" class="ext" target="_blank" rel="noopener noreferrer nofollow">time off work<span class="ext" aria-label="(link is external)"></span></a></li>
+<li>organise care for children or dependents</li>
+<li>organise care for pets</li>
+</ul><p>A&nbsp;funeral director will be able to talk to you about what happens before the funeral, and will&nbsp;organise the transport and care for the person that has died.&nbsp;</p>
+<p>For information about who you need&nbsp;to tell, see <a href="http://www.lawaccess.nsw.gov.au/Pages/representing/after_someone_dies/who_do_you_notify_after_someone_dies/who_do_you_notify_after_someone_dies.aspx" class="ext" target="_blank" rel="noopener noreferrer nofollow">NSW LawAccess.<span class="ext" aria-label="(link is external)"></span></a>&nbsp;</p>
+<p>In some circumstances you will need to take extra steps. This is common in the following situations:</p>
+<div class="nsw-accordion js-accordion">
+	  <h2 class="nsw-accordion__title"> When a child dies at or before birth</h2>
+	  <div class="nsw-accordion__content">
+	     <p>When a baby dies before or shortly after birth,&nbsp;the health care team looking after the baby will provide support and information to the family.</p>
+<p>There is additional&nbsp;support available through the organisations&nbsp;<a href="https://www.sands.org.au/sands-resources/about-grief" class="ext" target="_blank" rel="noopener noreferrer nofollow">Sands<span class="ext" aria-label="(link is external)"></span></a> and <a href="https://rednosegriefandloss.org.au/" class="ext" target="_blank" rel="noopener noreferrer nofollow">RedNose.<span class="ext" aria-label="(link is external)"></a></p>
+<p>There is a different process for registering the death of a child that has died&nbsp;before or shortly after birth. For more information on this process, see&nbsp;</span><span xml:lang="EN-US" lang="EN-US"><a href="https://www.bdm.nsw.gov.au/perinatal" class="ext" target="_blank" rel="noopener noreferrer nofollow">NSW Registry of Births Deaths and Marriages.<span class="ext" aria-label="(link is external)"><</a></p>
+<p>For more information about what to do, see <a href="https://legalanswers.sl.nsw.gov.au/rest-assured-legal-guide-wills-estates-and-funerals/stillborn-babies" class="ext" target="_blank" rel="noopener noreferrer nofollow">LegalAnswers NSW.<span class="ext" aria-label="(link is external)"></span></a></span></p>
+	 <div class="nsw-link-list">
+      <ul class="nsw-link-list__list">
+            <li class="nsw-link-list__item">
+              <a class="nsw-link-list__link" href="#">For support services for families of children who have died see SANDS
+                <svg class="nsw-icon nsw-link-list__icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#arrow"></use>
+            </svg>
+              </a>
+            </li>
+      </ul>
+    </div>
+
+    </div>
+	  <h2 class="nsw-accordion__title">When a death happens overseas</h2>
+	  <div class="nsw-accordion__content">
+	     <p>When someone dies overseas, it is common for family members to organise:</p>
+<ul><li>bringing them home</li>
+<li>registering their death with local authorities</li>
+<li>claiming on insurance</li>
+</ul><p><Usually, deaths that happen overseas are registered in the country the person&nbsp;has died in. </span></span></p>
+<p>This can cause delays to things like funerals and Australian death certificates. </p>
+<p><If someone has died overseas, you can get support and advice from the&nbsp;<a href="https://smartraveller.gov.au/guide/all-travellers/birth-death-marriage/Pages/death-overseas.aspx" class="ext" target="_blank" rel="noopener noreferrer nofollow">Department of Foreign Affairs and Trade.<span class="ext" aria-label="(link is external)"></span></a></p>
+	  </div>
+    </div>
+
+	  </div>
+	  <h2 class="nsw-accordion__title">Organise a funeral or memorial service</h2>
+	  <div class="nsw-accordion__content">
+	    <div class="nsw-notification nsw-notification--info nsw-notification--group">
+    <i class="fas fa-fw fa-clock"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">Services are usually held <strong>to 4 weeks after the death</strong></h4>
+	  </div>
+	  <i class="fas fa-fw  fa-usd-circle"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">Funerals in NSW cost on average between <strong>$5,000 and $8,000</strong></h4>
+	  </div>
+    </div>
+    <p>There are many different ways to hold a funeral or memorial service.</p>
+
+<p>he price you pay will depend on the type of service you have, and how much your funeral director charges. </p>
+
+<p>Services are usually organised by the closest relative. If there is any dispute over who is organising the service, seek legal advice. </p>
+	  </div>
+    <h2 class="nsw-accordion__title">Get support</h2>
+	  <div class="nsw-accordion__content">
+	    <p>Accordion content 3</p>
+	  </div>
+    <h2 class="nsw-accordion__title">Accordion title 4</h2>
+	  <div class="nsw-accordion__content">
+	    <p>Accordion content 4</p>
+	  </div>
+    <h2 class="nsw-accordion__title">Accordion title 5</h2>
+	  <div class="nsw-accordion__content">
+	    <p>Accordion content 5</p>
+	  </div>
+    <h2 class="nsw-accordion__title">Accordion title 6</h2>
+	  <div class="nsw-accordion__content">
+	    <p>Accordion content 6</p>
+	  </div>
+	</div>
+
+
+
+
+	<div class="nsw-notification nsw-notification--success">
+	  <svg class="nsw-icon nsw-notification__icon" focusable="false" aria-hidden="true">
+	    <use xlink:href="#status-success"></use>
+	  </svg>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">Rockdale Service Centre is coming soon</h4>
+	    <p>Rockdale Agency will close on 9 March 2018 and re-open in April. Please visit Kogarah Service Centre during this closure.</p>
+	  </div>
+	</div>
+
+    <div class="nsw-notification nsw-notification--info nsw-notification--group">
+    <i class="fas fa-fw fa-info-circle"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is INFO group user alert.</h4>
+	  </div>
+	  <i class="fas fa-fw fa-clock"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is TIME icon user alert.</h4>
+	  </div>
+     <i class="fas fa-fw fa-calendar-check"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is CALENDAR user alert.</h4>
+	  </div>
+    <i class="fas fa-fw  fa-usd-circle"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is COST user alert.</h4>
+	  </div>
+    <i class="fas fa-fw fa-envelope-open-text"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is MAIL user alert.</h4>
+	  </div>
+    <i class="fas fa-exclamation-triangle"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is IMPORTANT user alert.</h4>
+	  </div>
+    <i class="fas fa-fw fa-exclamation-triangle orange"></i>
+	  <div class="nsw-notification__content">
+	    <h4 class="nsw-notification__title">This is WARNING user alert.</h4>
+	  </div>
+	</div>
+
+  <ul class="nsw-socials">
+      <li class="nsw-socials__item">
+        <a class="nsw-socials__link js-share-this" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.service.nsw.gov.au" target="_blank" rel="noopener">
+          <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#facebook"></use>
+          </svg>
+          <span class="sr-only">Facebook</span>
+        </a>
+      </li>
+      <li class="nsw-socials__item">
+        <a class="nsw-socials__link js-share-this" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.service.nsw.gov.au" target="_blank" rel="noopener">
+          <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#linkedin"></use>
+          </svg>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </li>
+      <li class="nsw-socials__item">
+        <a class="nsw-socials__link js-share-this" href="https://twitter.com/intent/tweet/?url=https%3A%2F%2Fwww.service.nsw.gov.au" target="_blank" rel="noopener">
+          <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#twitter"></use>
+          </svg>
+          <span class="sr-only">Twitter</span>
+        </a>
+      </li>
+      <li class="nsw-socials__item">
+        <a class="nsw-socials__link " href="mailto:?body=https%3A%2F%2Fwww.service.nsw.gov.au" target="_self" rel="noopener">
+          <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#email"></use>
+          </svg>
+          <span class="sr-only">Email</span>
+        </a>
+      </li>
+    </ul>
+
+
+
+
+        </div>
+        <div class="nsw-col nsw-col--third">
+          <div class="nsw-link-list page-navigation">
+      <ul class="nsw-link-list__list">
+            <li class="nsw-link-list__item is-selected">
+              <a class="nsw-link-list__link" href="../end-of-life/">After a death
+                <svg class="nsw-icon nsw-link-list__icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#arrow"></use>
+            </svg>
+              </a>
+            </li>
+            <li class="nsw-link-list__item">
+              <a class="nsw-link-list__link" href="../planning-for-a-death/">Planning for a death
+                <svg class="nsw-icon nsw-link-list__icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#arrow"></use>
+            </svg>
+              </a>
+            </li>
+            <li class="nsw-link-list__item">
+              <a class="nsw-link-list__link" href="#">Acting as an executor
+                <svg class="nsw-icon nsw-link-list__icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#arrow"></use>
+            </svg>
+              </a>
+            </li>
+            <li class="nsw-link-list__item">
+              <a class="nsw-link-list__link" href="#">If you have a life limiting illness
+                <svg class="nsw-icon nsw-link-list__icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#arrow"></use>
+            </svg>
+              </a>
+            </li>
+      </ul>
+    </div>
+        </div>
+
+      </div>
+
+
+
+
+</div>
+
+</article>
+</main>
+
+
+<footer class="nsw-footer">
+  <div class="nsw-footer__upper">
+    <div class="nsw-container section-links">
+        <div class="section-links__group">
+          <h3 class="section-links__heading"><a href="#">Popular</a></h3>
+          <ul class="section-links__list">
+              <li class="section-links__item"><a href="#">I Work for NSW</a></li>
+              <li class="section-links__item"><a href="#">About NSW</a></li>
+              <li class="section-links__item"><a href="#">Life events</a></li>
+              <li class="section-links__item"><a href="#">News</a></li>
+              <li class="section-links__item"><a href="#">Service NSW locations</a></li>
+              <li class="section-links__item"><a href="#">NSW Government directory</a></li>
+          </ul>
+        </div>
+        <div class="section-links__group">
+          <h3 class="section-links__heading"><a href="#">About this website</a></h3>
+          <ul class="section-links__list">
+              <li class="section-links__item"><a href="#">Terms</a></li>
+              <li class="section-links__item"><a href="#">Privacy and security</a></li>
+              <li class="section-links__item"><a href="#">Accessibility</a></li>
+              <li class="section-links__item"><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="section-links__group">
+          <h3 class="section-links__heading"><a href="#">Departments</a></h3>
+          <ul class="section-links__list">
+              <li class="section-links__item"><a href="#">Customer Service</a></li>
+              <li class="section-links__item"><a href="#">Community and Justice</a></li>
+              <li class="section-links__item"><a href="#">Education</a></li>
+              <li class="section-links__item"><a href="#">Health</a></li>
+              <li class="section-links__item"><a href="#">Planning, Industry and Environment</a></li>
+              <li class="section-links__item"><a href="#">Premier and Cabinet</a></li>
+              <li class="section-links__item"><a href="#">Transport</a></li>
+              <li class="section-links__item"><a href="#">Treasury</a></li>
+          </ul>
+        </div>
+        <div class="section-links__group">
+          <h3 class="section-links__heading"><a href="#">NSW Government</a></h3>
+          <ul class="section-links__list">
+              <li class="section-links__item"><a href="#">The Premier</a></li>
+              <li class="section-links__item"><a href="#">NSW Ministers</a></li>
+              <li class="section-links__item"><a href="#">Find your local member of NSW </a></li>
+              <li class="section-links__item"><a href="#">Have your say</a></li>
+              <li class="section-links__item"><a href="#">Parliament</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="nsw-footer__lower">
+    <div class="nsw-container">
+      <p>We pay respect to the Traditional Custodians and First Peoples of NSW, and acknowledge their continued connection to their country and culture.</p>
+      <hr>
+      <ul class="nsw-footer-links">
+          <li class="nsw-footer-links__item">
+            <a href="#" class="nsw-footer-links__link">Tertiary</a>
+          </li>
+          <li class="nsw-footer-links__item">
+            <a href="#" class="nsw-footer-links__link">Tertiary</a>
+          </li>
+          <li class="nsw-footer-links__item">
+            <a href="#" class="nsw-footer-links__link">Tertiary</a>
+          </li>
+          <li class="nsw-footer-links__item">
+            <a href="#" class="nsw-footer-links__link">Tertiary</a>
+          </li>
+      </ul>
+      <p>Copyright © 2019</p>
+    </div>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+" crossorigin="anonymous">
+
+  <script src="/js/main.js"></script>
+  <script>window.NSW.initSite()</script>
+</body>
+</html>

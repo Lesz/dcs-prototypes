@@ -1,0 +1,68 @@
+{
+  "navitems": [
+    {
+      "text": "Life Events",
+      "url": "../life-events-home",
+      "id": "914d7e2",
+      "subnav": [
+        {
+          "text": "Starting and growing a family",
+          "url": "../starting-and-growing-a-family"
+        },
+        {
+          "text": "Schooling",
+          "url": "../schooling"
+        },
+        {
+          "text": "Jobs and Career",
+          "url": "../jobs-and-career"
+        },
+        {
+          "text": "Serious illness and injury",
+          "url": "../serious-illness-and-injury"
+        },
+        {
+          "text": "Natural disasters",
+          "url": "../natural-disasters"
+        },
+        {
+          "text": "Living in NSW",
+          "url": "../living-in-nsw"
+        },
+        {
+          "text": "Retirement",
+          "url": "../retirement"
+        },
+        {
+          "text": "End of Life",
+          "url": "../end-of-life"
+        },
+         {
+          "text": "Another link",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "text": "Improving NSW",
+      "url": "#"
+    },
+    {
+      "text": "Your Services",
+      "url": "#"
+    },
+    {
+      "text": "Your Government",
+      "url": "#"
+    },
+    {
+      "text": "About NSW",
+      "url": "#"
+    },
+    {
+      "text": "Contact us",
+      "url": "#"
+    }
+  ],
+  "mega-menu": true
+}

@@ -1,0 +1,12 @@
+{
+  "theme": "",
+  "heading": "Life events",
+  "url": "../life-events-home",
+  "copy": "Information, advice and support so that you can make the right decisions for you.",
+  "img": {
+    "original": "https://picsum.photos/id/421/2000/1250",
+    "small": "https://picsum.photos/id/421/768/480",
+    "medium": "https://picsum.photos/id/421/300/200",
+    "large": "https://picsum.photos/id/421/2000/1250"
+  }
+}

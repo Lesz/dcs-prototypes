@@ -1,0 +1,18 @@
+---
+title: Life Events Home
+model:
+    nav-basic: ../../components/main-navigation/main-navigation.json
+    nav-mega: ../../components/main-navigation/mega-navigation.json
+    breadcrumbs: ../../components/breadcrumbs/breadcrumbs.json
+    footer: ../../patterns/footer/footer.json
+    hero-banner: ../../components/hero-banner/hero-banner.json
+    card-media: ../../components/card/card-media.json
+    link-list: ../../components/link-list/link-list.json
+
+---
+{{>_header}}
+{{>_main-navigation model.nav-mega}}
+{{>_hero-banner model.hero-banner}}
+
+
+{{>_footer model.footer}}

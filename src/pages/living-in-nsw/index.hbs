@@ -1,0 +1,37 @@
+---
+title: Living in NSW
+model:
+    nav-basic: ../../components/main-navigation/main-navigation.json
+    nav-mega: ../../components/main-navigation/mega-navigation.json
+    breadcrumbs: ../../components/breadcrumbs/breadcrumbs.json
+    footer: ../../patterns/footer/footer.json
+    hero-banner: ../../components/hero-banner/hero-banner.json
+    card-media: ../../components/card/card-media.json
+    link-list: ../../components/link-list/link-list.json
+
+---
+{{>_header}}
+{{>_main-navigation model.nav-mega}}
+<div class="nsw-container">
+  {{>_breadcrumbs model.breadcrumbs}}
+  </div> 
+
+
+<div class="nsw-hero-banner nsw-hero-banner--light lesz-banner">
+  <div class="nsw-container">
+    <div class="nsw-hero-banner__content-area">
+      <div class="nsw-hero-banner__content">
+        <h2 class="nsw-hero-banner__title">
+          <a href="#" class="nsw-hero-banner__link">Living in NSW</a>
+        </h2>
+        <p>Description text goes here</p>
+        <svg class="nsw-icon nsw-hero-banner__icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#arrow"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{>_footer model.footer}}

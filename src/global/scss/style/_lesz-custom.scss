@@ -1,0 +1,252 @@
+/* CSS Document */
+
+.nsw-container {
+  font-family: $font-stack;
+  position: relative;
+
+  .deck {
+    @include font-size('md');
+    @include nsw-spacing(margin-bottom, lg);
+    max-width: 775px;
+
+    p:last-child {
+      @include nsw-spacing(margin-bottom, xxl);
+    }
+  }
+
+  .nsw-wysiwyg-content {
+    h1 {
+      @include nsw-spacing(margin-top, lg);
+      @include nsw-spacing(margin-bottom, lg);
+    }
+  }
+}
+
+main {
+  color: $dark80;
+}
+
+.nsw-header__logo {
+  width: 71px;
+  height: 76px;
+}
+
+footer {
+  @include nsw-spacing(margin-top, xxl);
+}
+
+.standard-header__background {
+  height: 288px;
+  margin-bottom: -178px;
+  background-color: $light10;
+}
+
+.standard-header__content {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1332px;
+  padding-top: 24px;
+  background-color: $white;
+  z-index: 0;
+}
+
+.standard-header__content::before {
+  box-shadow: 0 0 12px $light20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 288px;
+  width: 100%;
+  content: '';
+  z-index: -1;
+}
+
+.standard-header__content::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 305px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  background: $white;
+  content: '';
+  z-index: -1;
+}
+
+//NESTED ACCORDION
+
+.nsw-accordion.numbered-accordion {
+  @include nsw-spacing(margin-bottom, xxl);
+
+  .nsw-accordion__button {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+
+    &::before {
+      content: '1';
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid $nsw-primary-blue;
+      background-color: $white;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      left: -17px;
+      top: 1rem;
+      padding-top: 0.25rem;
+      font-size: 1rem;
+    }
+
+    &.is-open {
+      &::before {
+        background-color: $nsw-primary-blue;
+        color: $white;
+      }
+    }
+  }
+
+  .nsw-accordion {
+    .nsw-accordion__button {
+      padding: 0.5rem 0 0.5rem 2rem;
+      font-size: 1.25rem;
+      background-color: transparent;
+      border: 0;
+
+      &::before {
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 800;
+        content: '\f055';
+        border: 0;
+        position: absolute;
+        left: 0;
+        top: 0.25rem;
+        font-size: 1.25rem;
+      }
+
+      &.is-open::before {
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 800;
+        content: '\f056';
+        border: 0;
+        position: absolute;
+        left: 0;
+        top: 0.25rem;
+        font-size: 1.25rem;
+        background-color: transparent;
+        color: $nsw-primary-blue;
+      }
+
+    }
+
+    &__title {
+      background-color: transparent;
+
+      svg {
+        display: none;
+      }
+    }
+
+    .nsw-accordion__content {
+      margin-top: -1rem;
+      border-left: 2px solid $nsw-primary-blue;
+      margin-left: 14px;
+    }
+  }
+}
+
+.nsw-accordion__content {
+  .nsw-link-list {
+    &__item {
+      border: 0;
+      background-color: $info-blue-light10;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    &__link {
+      color: $nsw-primary-blue;
+    }
+  }
+}
+
+.nsw-accordion.plain-accordion {
+  @include nsw-spacing(margin-bottom, xxl);
+}
+
+//PAGE NAVIGATION
+
+.nsw-link-list.page-navigation {
+  @include font-stack(regular);
+
+  margin-top: 0;
+
+  svg {
+    display: none;
+  }
+
+  .is-selected {
+    position: relative;
+
+    .nsw-link-list__link {
+      @include font-stack(heading);
+    }
+
+    .nsw-link-list__link::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $nsw-highlight-blue;
+    }
+  }
+}
+
+//USER ALERTS
+
+.nsw-notification {
+
+  @include nsw-spacing(margin-bottom, xl);
+
+  &.nsw-notification--group {
+    display: block;
+
+    i {
+      float: left;
+      font-size: 30px;
+      margin-right: 0.75rem;
+      margin-left: -0.25rem;
+      color: $nsw-highlight-blue;
+    }
+
+    .nsw-notification__content {
+      padding: 0.35rem 0 1rem;
+
+      @include nsw-spacing(margin-bottom, md);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .orange {
+      color: $warning-orange;
+    }
+  }
+
+  .nsw-notification__title {
+    font-weight: 400;
+    color: $black;
+
+    strong {
+      font-weight: 800;
+    }
+  }
+}
+
+
