@@ -8,13 +8,13 @@ NSW Digital Design system is a collection of reusable UI components used on the 
 ### 1. Clone repo
 
 ```
-git clone git@github.com:digitalnsw/nsw-design-system.git
+git clone github.com/Lesz/dcs-prototypes
 ```
 
 ### 2. Jump inside cloned repo
 
 ```
-cd nsw-design-system
+cd dcs-prototypes
 ```
 
 ### 3. Install dependencies
