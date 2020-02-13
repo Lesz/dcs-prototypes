@@ -4,6 +4,28 @@
   font-family: $font-stack;
   position: relative;
 
+  .page-content {
+    p {
+      line-height: 1.5;
+    }
+
+    ul {
+      line-height: 2;
+    }
+
+    a:not(.nsw-button):not(.nsw-tag) {
+      color: $nsw-primary-blue;
+      text-decoration: underline;
+    }
+
+    a:not(.nsw-button):not(.nsw-tag):hover {
+      outline: rgba($nsw-tertiary-blue, 0.2);
+      background-color: $link-hover-outline-color;
+    }
+
+
+  }
+
   .deck {
     @include font-size('md');
     @include nsw-spacing(margin-bottom, lg);
@@ -36,9 +58,14 @@ footer {
 }
 
 .standard-header__background {
-  height: 288px;
-  margin-bottom: -178px;
+
   background-color: $light10;
+
+  @include breakpoint('md') {
+    height: 288px;
+    margin-bottom: -178px;
+  }
+
 }
 
 .standard-header__content {
@@ -52,14 +79,17 @@ footer {
 }
 
 .standard-header__content::before {
-  box-shadow: 0 0 12px $light20;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 288px;
-  width: 100%;
-  content: '';
-  z-index: -1;
+  @include breakpoint('md') {
+
+    box-shadow: 0 0 12px $light20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 288px;
+    width: 100%;
+    content: '';
+    z-index: -1;
+  }
 }
 
 .standard-header__content::after {
@@ -79,32 +109,68 @@ footer {
 .nsw-accordion.numbered-accordion {
   @include nsw-spacing(margin-bottom, xxl);
 
+  .nsw-accordion__title {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 150%;
+      border-left: 2px solid $dark60;
+      top: -10px;
+      z-index: 1;
+    }
+  }
+
+  .nsw-accordion__title:first-child {
+    &::before {
+      top: 25px;
+    }
+  }
+
+  .nsw-accordion__title:last-child {
+    &::before {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
   .nsw-accordion__button {
     padding-left: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    border: 0;
+
+    @include breakpoint('md') {
+      font-size: 1.5rem;
+    }
 
     &::before {
       content: '1';
       position: absolute;
       border-radius: 50%;
-      border: 2px solid $nsw-primary-blue;
+      border: 2px solid $dark60;
       background-color: $white;
       width: 30px;
       height: 30px;
       text-align: center;
-      left: -17px;
+      left: rem(-14px);
       top: 1rem;
       padding-top: 0.25rem;
       font-size: 1rem;
+      z-index: 2;
+      color: $dark60;
     }
 
-    &.is-open {
-      &::before {
-        background-color: $nsw-primary-blue;
-        color: $white;
-      }
+    &.is-open::before {
+      border: 2px solid $dark60;
     }
   }
+
+  .nsw-accordion__content {
+    padding: rem(16px) rem(0) rem(16px) rem(32px);
+    border-left: 2px solid $dark60;
+  }
+
 
   .nsw-accordion {
     .nsw-accordion__button {
@@ -119,41 +185,40 @@ footer {
         content: '\f055';
         border: 0;
         position: absolute;
-        left: 0;
+        left: -0.5rem;
         top: 0.25rem;
         font-size: 1.25rem;
+        color: $black;
       }
 
       &.is-open::before {
-        font-family: 'Font Awesome 5 Pro';
-        font-weight: 800;
         content: '\f056';
-        border: 0;
-        position: absolute;
-        left: 0;
-        top: 0.25rem;
-        font-size: 1.25rem;
-        background-color: transparent;
-        color: $nsw-primary-blue;
       }
+
 
     }
 
-    &__title {
+    .nsw-accordion__icon {
+      display: none;
+    }
+
+    .nsw-accordion__title {
       background-color: transparent;
 
-      svg {
-        display: none;
+      &::before {
+        border: 0;
       }
     }
 
     .nsw-accordion__content {
       margin-top: -1rem;
-      border-left: 2px solid $nsw-primary-blue;
-      margin-left: 14px;
+      border: 0;
+      padding-left: 2rem;
     }
   }
 }
+
+
 
 .nsw-accordion__content {
   .nsw-link-list {
@@ -168,6 +233,8 @@ footer {
 
     &__link {
       color: $nsw-primary-blue;
+      font-size: 1rem;
+
     }
   }
 }
@@ -214,39 +281,55 @@ footer {
 
   &.nsw-notification--group {
     display: block;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+
+    @include breakpoint('md') {
+      margin-left: 2rem;
+    }
+
 
     i {
       float: left;
-      font-size: 30px;
+      font-size: 24px;
       margin-right: 0.75rem;
       margin-left: -0.25rem;
       color: $nsw-highlight-blue;
     }
 
     .nsw-notification__content {
-      padding: 0.35rem 0 1rem;
-
-      @include nsw-spacing(margin-bottom, md);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
+      margin: 0;
     }
 
-    .orange {
-      color: $warning-orange;
+    .note {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+
+    .note.warning {
+      i {
+        color: $warning-orange;
+      }
+    }
+
+    .nsw-notification__title {
+      font-weight: 400;
+      color: $black;
+
+      strong {
+        font-weight: 800;
+      }
     }
   }
 
-  .nsw-notification__title {
-    font-weight: 400;
-    color: $black;
-
-    strong {
-      font-weight: 800;
-    }
+  .nsw-notification__icon {
+    width: rem(24px);
+    height: rem(24px);
+    margin-top: -0.25rem;
   }
 }
-
-
